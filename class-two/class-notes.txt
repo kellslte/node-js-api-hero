@@ -11,3 +11,5 @@
 // 6. Rebasing is a way to integrate changes from one branch into another by applying the changes on top of the target branch, creating a linear history.
 // . 7. Forking is creating a copy of a repository to work on independently, allowing developers to experiment with changes without affecting the original codebase. 
 // . 8. Cloning is the process of creating a local copy of a remote repository, allowing developers to work on the code offline and push changes back to the remote repository when ready.
+// . 9. Stashing is a way to temporarily save changes that are not ready to be committed, allowing developers to switch branches or work on other tasks without losing their progress.
+// . 10. Remote repositories are hosted versions of a repository that can be accessed by multiple developers, allowing for collaboration and sharing of code.

@@ -65,6 +65,8 @@ const age = 23;
 8 !== '8' // true
 
 const number = 10;
+const my_Number = 11;
+const anotherNumber = 6;
 
 11 <= number;
 
