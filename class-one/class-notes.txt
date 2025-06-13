@@ -1,0 +1,19 @@
+The makeup of Nodejs
+
+// Node.js is a runtime environment that allows you to run JavaScript on the server side.
+
+// It is built on the V8 JavaScript engine, which is the same engine that powers Google Chrome.
+
+// Node.js uses an event-driven, non-blocking I/O model, which makes it lightweight and efficient.
+
+// Key features of Node.js include:
+// 1. Asynchronous and Event-Driven: Node.js uses an event-driven architecture, which allows it to handle multiple requests simultaneously without blocking the execution of other code.
+// 2. Single-Threaded: Node.js operates on a single-threaded event loop, which means it can handle many connections concurrently without the overhead of thread management.
+// 3. Non-Blocking I/O: Node.js uses non-blocking I/O operations, which allows it to perform tasks like reading files or querying databases without blocking the execution of other code.
+// 4. NPM (Node Package Manager): Node.js comes with a built-in package manager called NPM, which allows developers to easily install and manage third-party libraries and modules.
+// 5. Cross-Platform: Node.js can run on various operating systems, including Windows, macOS, and Linux, making it versatile for different environments.
+
+// Built-In modules
+// Node.js comes with a set of built-in modules that provide various functionalities, such as file system operations, networking, and more. Some commonly used built-in modules include:
+
+

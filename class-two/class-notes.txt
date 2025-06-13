@@ -1,0 +1,13 @@
+// Version Control
+// Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+// It is essential for collaborative software development, allowing multiple developers to work on the same codebase without conflicts.
+// Repositories are where the version control system stores the files and their history.
+// Git is a popular version control system that allows developers to track changes, collaborate, and manage code efficiently.
+// . 1. Branches are used to create separate lines of development within a repository, allowing developers to work on features or fixes independently without affecting the main codebase.
+// . 2. Commits are snapshots of the code at a specific point in time, allowing developers to track changes and revert to previous versions if needed.
+// . 3. Merging is the process of combining changes from one branch into another, allowing developers to integrate their work into the main codebase.  
+// . 4. Pull requests are a way to propose changes to a codebase, allowing other developers to review and discuss the changes before merging them into the main branch.
+// . 5. Tags are used to mark specific points in the code history, such as releases or milestones, making it easier to reference those points later.
+// 6. Rebasing is a way to integrate changes from one branch into another by applying the changes on top of the target branch, creating a linear history.
+// . 7. Forking is creating a copy of a repository to work on independently, allowing developers to experiment with changes without affecting the original codebase. 
+// . 8. Cloning is the process of creating a local copy of a remote repository, allowing developers to work on the code offline and push changes back to the remote repository when ready.
