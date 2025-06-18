@@ -1,0 +1,58 @@
+// Functions
+// A function is a block of code that performs a specific task.
+// Functions can take inputs (parameters) and return outputs (return values).
+// Defining a function
+// 1. Function Declaration
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+// 2. Function Expression
+const greetExpression = function(name) {
+    console.log("Hello, " + name + "!");
+};
+// 3. Arrow Function
+const greetArrow = (name) => {
+    return "Hello, " + name + "!";
+};
+const  greetArrowTwo = name => greetArrow(name); // Will come back here
+// Calling a function
+greet("Alice");
+greetExpression("Bob");
+greetArrow("Charlie");
+// Function with return value
+function add(a, b) {
+    return a + b;
+}
+const sum = add(5, 10);
+console.log("Sum:", sum); // Output: Sum: 15
+// Function with default parameters
+function multiply(a, b = 1) {
+    return a * b;
+}
+const product = multiply(5); // b defaults to 1
+console.log("Product:", product); // Output: Product: 5
+// Function with rest parameters
+function sumAll(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+const total = sumAll(1, 2, 3, 4, 5);
+console.log("Total:", total); // Output: Total: 15
+
+// Modules
+// Modules allow you to split your code into separate files and import/export functionality.
+// Exporting a function from a module
+export function greetModule(name) {
+    return `Hello from module, ${name}!`;
+}
+// Importing a function from a module
+import { greetModule } from './module.js';
+// Using the imported function
+const greeting = greetModule("Dave");
+console.log(greeting); // Output: Hello from module, Dave!
+// Note: Ensure that your environment supports ES6 modules or use a bundler like Webpack or Rollup.
+// Types of Modules
+//1. ES6 Modules: Use `import` and `export` keywords.
+//2. CommonJS Modules: Use `require` and `module.exports` (Node.js style).
+//3. AMD Modules: Asynchronous Module Definition, used in older JavaScript frameworks.
+//4. UMD Modules: Universal Module Definition, compatible with both CommonJS and AMD.
+// 5. IIFE (Immediately Invoked Function Expression): A function that runs as soon as it is defined.
