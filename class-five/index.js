@@ -123,4 +123,4 @@ function sumAllTwo(...numbers)
     return numbers.reduce( ( total, num ) => total + num, 0 );
 }
 const totalTwo = sumAllTwo( 1, 2, 3, 4, 5 );
-console.log( "Total:", totalTwo ); // Output: Total: 15
+console.log("Total:", sumAllTwo(1, 2, 3, 4, 5)); // Output: Total: 15
