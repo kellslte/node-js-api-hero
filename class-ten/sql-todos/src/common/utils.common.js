@@ -1,3 +1,6 @@
+import jwt from "jsonwebtoken";
+import { config } from "./config.common.js";
+
 export const catchAsync = ( fn ) =>
 {
     return async ( req, res, next ) =>
@@ -28,4 +31,16 @@ export const sendResponse = ( res, statusCode, success, message, data ) =>
         message,
         data
     } )
+}
+
+export const generateAccessToken = ( payload ) =>
+{
+    return jwt.sign(payload, config.getOrThrow("JWT_SECRET"), {
+      expiresIn: config.getOrThrow("JWT_EXPIRES_IN"),
+    });
+}
+
+export const decodeAccessToken = ( token ) =>
+{
+    return jwt.verify(token, config.getOrThrow("JWT_SECRET"));
 }

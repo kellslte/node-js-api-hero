@@ -3,7 +3,7 @@ import *  as todoService from "./todo.service.js";
 
 export const getTodos = catchAsync( async ( req, res ) =>
 {
-    const todos = todoService.getTodos();
+    const todos = await todoService.getTodos();
 
     sendResponse( res, 200, true, "Fetched all todos", todos );
 })
