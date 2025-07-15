@@ -17,4 +17,16 @@ export const getThreadById = catchAsync(async (req, res) => {
 export const createThread = catchAsync(async (req, res) => {
   const thread = await threadService.createThread(req.body);
   sendResponse(res, 201, true, "Thread created successfully", thread);
+} );
+
+export const updateThread = catchAsync(async (req, res) => {
+  const updated = await threadService.updateThread(req.params.id, req.body);
+  if (!updated) return sendResponse(res, 404, false, "Thread not found");
+  sendResponse(res, 200, true, "Thread updated successfully");
+} );
+
+export const deleteThread = catchAsync(async (req, res) => {
+  const deleted = await threadService.deleteThread(req.params.id);
+  if (!deleted) return sendResponse(res, 404, false, "Thread not found");
+  sendResponse(res, 200, true, "Thread deleted successfully");
 });

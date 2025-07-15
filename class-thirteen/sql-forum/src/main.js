@@ -5,7 +5,7 @@ import "./common/associations.js";
 
 (async () => {
   await connectToDatabase();
-  const port = config.getOrThrow("PORT") || 3000;
+  const port = config.getOrThrow("PORT");
   server.listen(port, () => {
     console.log(`Forum app listening on port ${port}`);
   });

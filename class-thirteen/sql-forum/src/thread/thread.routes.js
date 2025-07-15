@@ -1,5 +1,11 @@
 import { Router } from "express";
-import { getThreadById, getThreads } from "./thread.controller.js";
+import {
+  createThread,
+  deleteThread,
+  getThreadById,
+  getThreads,
+  updateThread,
+} from "./thread.controller.js";
 import { checkAuthentication } from "../middleware/auth.middleware.js";
 
 export const threadRouter = Router();
@@ -11,24 +17,10 @@ threadRouter.get("/", checkAuthentication, getThreads);
 threadRouter.get("/:id", checkAuthentication, getThreadById);
 
 // Create thread
-threadRouter.post("/", checkAuthentication);
+threadRouter.post("/", checkAuthentication, createThread);
 
 // Update thread
-threadRouter.put(
-  "/:id",
-  catchAsync(async (req, res) => {
-    const updated = await updateThread(req.params.id, req.body);
-    if (!updated) return sendResponse(res, 404, false, "Thread not found");
-    sendResponse(res, 200, true, "Thread updated successfully");
-  })
-);
+threadRouter.put("/:id", checkAuthentication, updateThread);
 
 // Delete thread
-threadRouter.delete(
-  "/:id",
-  catchAsync(async (req, res) => {
-    const deleted = await deleteThread(req.params.id);
-    if (!deleted) return sendResponse(res, 404, false, "Thread not found");
-    sendResponse(res, 200, true, "Thread deleted successfully");
-  })
-); 
+threadRouter.delete("/:id", checkAuthentication, deleteThread);
