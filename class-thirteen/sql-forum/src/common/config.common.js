@@ -7,4 +7,9 @@ export const config = {
     if (!value) throw new Error(`Missing config key: ${key}`);
     return value;
   },
+
+  getEnvironment ()
+  {
+    return this.getOrThrow( 'NODE_ENV' );
+  }
 }; 

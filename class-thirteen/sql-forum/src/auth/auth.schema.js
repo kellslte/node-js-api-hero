@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const registerSchema = z.object({
     name: z.string().min(3).max(50),
-    email: z.string().email(),
+    email: z.email(),
     username: z.string().min(3).max(20).regex(/^[a-zA-Z0-9]+$/, {
         message: "Username must contain only letters and numbers",
     }),
