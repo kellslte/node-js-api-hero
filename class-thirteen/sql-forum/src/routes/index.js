@@ -1,0 +1,14 @@
+import { Router } from "express";
+import { healthCheck } from "../app.controller.js";
+import { userRouter } from "../user/user.routes.js";
+import { threadRouter } from "../thread/thread.routes.js";
+import { postRouter } from "../post/post.routes.js";
+import { authRouter } from "../auth/auth.routes.js";
+
+export const forumRouter = Router();
+
+forumRouter.get("/health", healthCheck);
+forumRouter.use("/users", userRouter);
+forumRouter.use("/threads", threadRouter);
+forumRouter.use("/posts", postRouter);
+forumRouter.use("/auth", authRouter); 

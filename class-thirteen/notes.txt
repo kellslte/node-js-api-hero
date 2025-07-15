@@ -1,0 +1,43 @@
+Behaviour Driven Testing (BDD) Notes
+
+- BDD is a software development approach that extends Test Driven Development (TDD) by writing test cases in natural language that non-programmers can read.
+- Focuses on the behavior of an application for the end user, not just the implementation.
+- Uses "Given-When-Then" syntax to describe scenarios:
+    - Given: the initial context (preconditions)
+    - When: an event or action occurs
+    - Then: the expected outcome
+
+Benefits:
+- Improves communication between developers, testers, and business stakeholders.
+- Ensures requirements are well-understood and testable.
+- Tests are more readable and maintainable.
+
+Common BDD Tools:
+- JavaScript: Cucumber.js, Jest with jest-cucumber, Jasmine, Mocha with Chai
+- Other languages: Cucumber (Ruby, Java), SpecFlow (.NET), Behave (Python)
+
+Example (Jest + jest-cucumber):
+Feature: User Login
+  Scenario: Successful login
+    Given a registered user
+    When they submit correct credentials
+    Then they should be logged in
+
+// In code (pseudo-JS):
+describe('User Login', () => {
+  it('should log in with correct credentials', () => {
+    // Given
+    // When
+    // Then
+  });
+});
+
+Best Practices:
+- Write scenarios in plain language.
+- Collaborate with stakeholders to define behaviors.
+- Keep scenarios focused and independent.
+- Automate BDD scenarios as part of CI/CD.
+
+References:
+- https://cucumber.io/docs/bdd/
+- https://martinfowler.com/bliki/BehaviourDrivenDevelopment.html
