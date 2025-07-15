@@ -21,11 +21,12 @@ export const createThread = async (thread) => {
 };
 
 export const updateThread = async (id, thread) => {
-  const [updated] = await Thread.update(thread, { where: { id } });
+  const { userId, ...others } = thread;
+  const [updated] = await Thread.update(others, { where: { id, userId } });
   return updated;
 };
 
-export const deleteThread = async (id) => {
-  await Thread.destroy({ where: { id } });
+export const deleteThread = async (id, userId) => {
+  await Thread.destroy({ where: { id, userId } });
   return true;
-}; 
+};
