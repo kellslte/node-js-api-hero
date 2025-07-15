@@ -21,12 +21,13 @@ export const createPost = async (post) => {
   return newPost;
 };
 
-export const updatePost = async (id, post) => {
-  const [updated] = await Post.update(post, { where: { id } });
+export const updatePost = async ( id, post ) =>
+{ 
+  const [updated] = await Post.update({ content: post.content }, { where: { id, userId: post.userId } });
   return updated;
 };
 
-export const deletePost = async (id) => {
+export const deletePost = async (id, userId) => {
   await Post.destroy({ where: { id } });
   return true;
 }; 

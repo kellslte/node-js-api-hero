@@ -11,7 +11,7 @@ postRouter.get("/", checkAuthentication, getPosts);
 postRouter.get("/:id", checkAuthentication, getPostById);
 
 // Create post
-postRouter.post("/", checkAuthentication, createPost);
+postRouter.post("/:threadId", checkAuthentication, createPost);
 
 // Update post
 postRouter.put("/:id", checkAuthentication, updatePost);
